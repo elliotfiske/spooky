@@ -14,6 +14,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    <script src="js/rotate.js"></script>
+
     <style>
 		@font-face {
 		    font-family: pixels;
@@ -33,11 +35,25 @@
         		font-size: 70px ;
         	}
 
+        	img {
+        		position: absolute;
+        	}
+
         canvas { width: 100%; height: 100% }
     </style>
 
 </head>
 <body>
+
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
+<img src="skelly.png" />
        
 <div class="container">
 	<div class="row">
@@ -68,18 +84,56 @@
 	</div>
 </div>
 
-<img src="skelly.png" />
 
 <script type="text/javascript">
 (function titleScroller(text) {
     document.title = text;
-    console.log(text);
     setTimeout(function () {
         titleScroller(text.substr(1) + text.substr(0, 1));
     }, 200);
 }("💀 SPOOK ZONE 💀"));
 
+var angle = 10;
+
+setInterval(function(){
+ angle *= -1;
+$("img").rotate(angle);
+},100);
+
+function clamp(val, min, max){
+	return val < min? min : (val > max? max : val);
+}
+
+function moveSkellies() {
+	var top = Math.random() * 100 - 50;
+	var left = Math.random() * 100 - 50;
+
+
+
+	$("img").each(function() {
+		$(this).animate({
+			top: "+=" + top,
+			left: "+=" + left,
+		}, 200 + Math.random() * 800, function() {
+			
+			
+			moveSkellies();
+		});
+	})
+}
+
+$("img").each(function() {
+	var start_top = Math.random() * window.innerHeight;
+	var start_left = Math.random() * window.innerWidth;
+
+	$(this).css("top", start_top);
+	$(this).css("left", start_left);
+});
+
+moveSkellies();
 </script>
+
+
 
 
 
