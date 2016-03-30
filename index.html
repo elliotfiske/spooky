@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jquery.min.js"></script>
+    <meta charset=utf-8>
+    <title>💀 SPOOK ZONE 💀</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <style>
+		@font-face {
+		    font-family: pixels;
+		    src: url(BetterPixels.ttf);
+		}
+        body { margin: 0;
+        			background-color: black !important;
+        			color: white !important;
+        			font-family: pixels !important;
+        			 }
+
+        	h1 {
+        		font-size: 100px ;
+        		line-height: 0.6;
+        	}
+        	h3 {
+        		font-size: 70px ;
+        	}
+
+        canvas { width: 100%; height: 100% }
+    </style>
+
+</head>
+<body>
+       
+<div class="container">
+	<div class="row">
+		<h1>SPOOKY HOT DOG dot mp3</h1>
+	</div>
+
+	<div class="row">
+		<audio controls>
+			<source src="SPOOKY_HOT_DOG.mp3" type="audio/mpeg">
+			Sorry get a better browser dummy :P
+		</audio>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="row">
+		<h1>EXTRA SPOOKY HOT DOG dot ogg</h1>
+		<h3 style="color: red; margin-top: -30px">WARNING: VERY SPOOKY</h3>
+	</div>
+	
+	<div class="row">
+		<audio controls>
+			<source src="EXTRA_SPOOKY_HOT_DOG.mp3" type="audio/mpeg">
+			Sorry get a better browser dummy :P
+		</audio>
+	</div>
+</div>
+
+<img src="skelly.png" />
+
+<script type="text/javascript">
+(function titleScroller(text) {
+    document.title = text;
+    console.log(text);
+    setTimeout(function () {
+        titleScroller(text.substr(1) + text.substr(0, 1));
+    }, 200);
+}("💀 SPOOK ZONE 💀"));
+
+</script>
+
+
+
+</body>
+</html>
