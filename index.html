@@ -37,6 +37,8 @@
 
         	img {
         		position: absolute;
+        		z-index: 500;
+        		cursor: pointer;
         	}
 
         	a {
@@ -49,15 +51,17 @@
 </head>
 <body>
 
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
-<img src="skelly.png" />
+
+
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
+<img class="skeleman" src="skelly.png" />
        
 <div class="container">
 	<div class="row">
@@ -145,6 +149,14 @@ $("#lol").mouseover(function() {
 $("#lol2").mouseover(function() {
 	$(this).html("FROG FRACTIONS 2 DOWNLOAD LINK");
 })
+
+$(".skeleman").click(function() {
+	$(this).attr("src", "boom.gif");
+	blarg = $(this);
+	setTimeout(function() {
+		blarg.remove();
+	}, 300);
+});
 </script>
 
 
