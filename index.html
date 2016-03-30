@@ -29,7 +29,7 @@
 
         	h1 {
         		font-size: 100px ;
-        		line-height: 0.6;
+        		/*line-height: 0.6;*/
         	}
         	h3 {
         		font-size: 70px ;
@@ -37,6 +37,10 @@
 
         	img {
         		position: absolute;
+        	}
+
+        	a {
+        		font-size: 30px;
         	}
 
         canvas { width: 100%; height: 100% }
@@ -66,6 +70,7 @@
 			Sorry get a better browser dummy :P
 		</audio>
 	</div>
+	<a href="SPOOKY_HOT_DOG.mp3" download>TERRIFYING DOWNLOAD LINK</a>
 
 	<br>
 	<br>
@@ -82,6 +87,7 @@
 			Sorry get a better browser dummy :P
 		</audio>
 	</div>
+	<a href="EXTRA_SPOOKY_HOT_DOG.mp3" download>MORTIFYING DOWNLOAD LINK</a>
 </div>
 
 
@@ -115,8 +121,8 @@ function moveSkellies() {
 			top: "+=" + top,
 			left: "+=" + left,
 		}, 200 + Math.random() * 800, function() {
-			
-			
+
+
 			moveSkellies();
 		});
 	})
